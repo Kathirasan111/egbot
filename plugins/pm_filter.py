@@ -273,8 +273,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬', url='https://t.me/joinchat/b2crtyaFjLRiMDQ1'),
-                    InlineKeyboardButton('👥 𝑮𝒓𝒐𝒖𝒑 👥', url='https://t.me/PCLinks')
+                    InlineKeyboardButton('🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬', url='https://t.me/Ckottrelease_links'),
+                    InlineKeyboardButton('👥 𝑮𝒓𝒐𝒖𝒑 👥', url='https://t.me/CK_linkz')
                 ]
                 ]
             await query.message.edit(text=f"<b>💞𝑫𝒆𝒗𝒐𝒍𝒐𝒑𝒆𝒓💞 : <a href='https://t.me/TTRabit'>𝑱𝑼𝑺𝑻𝑰𝑵</a>\n𝑳𝒂𝒏𝒈𝒖𝒂𝒈𝒆 : മലയാളം🤭\n😎𝑺𝒐𝒖𝒓𝒄𝒆 𝑪𝒐𝒅𝒆😎 :സാധനം പുറത്ത് കൊടുക്കുന്നില്ല കേട്ടോ 😁\n🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬 : <a href='https://t.me/CKofficials'>🎬 𝑶𝑻𝑻 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 🎬</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
