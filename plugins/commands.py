@@ -67,10 +67,10 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬', url='https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+                        InlineKeyboardButton('🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬', url='https://t.me/CKofficials')
                     ],
                     [
-                        InlineKeyboardButton('👥 𝑮𝒓𝒐𝒖𝒑 👥', url='https://t.me/PCLinks')
+                        InlineKeyboardButton('👥 𝑮𝒓𝒐𝒖𝒑 👥', url='https://t.me/CK_linkz')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -99,23 +99,23 @@ async def start(bot, cmd):
 
             photo="https://telegra.ph/file/c87edb2affe43f670af7b.jpg",
 
-            caption=f"<b>Hai</b> {cmd.from_user.mention}  Guys!🙋,\n\n<b>I'm[☞ 𝙸𝙼𝙳𝙱 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 🤖](https://t.me/VjimdbotFilter_bot) or you can call me as Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group</b> ....\n\n<b>Its Easy To Use Me; Just Add Me To Your Group As Admin, Thats All, i will Provide Movies There</b>...🤓\n\n<b>©️𝑴𝒂𝒊𝒏𝒕𝒂𝒊𝒏𝒆𝒅 𝒃𝒚</b>   <a href=tg://user?id=1946514705> 𝑨𝒄𝒉𝒖 𝑽𝒋♨</a>",
+            caption=f"<b>Hai</b> {cmd.from_user.mention}  Guys!🙋,\n\n<b>I'm[☞ 𝙸𝙼𝙳𝙱 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 🤖](https://t.me/XiaomiMintBrowserobot) or you can call me as Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group</b> ....\n\n<b>Its Easy To Use Me; Just Add Me To Your Group As Admin, Thats All, i will Provide Movies There</b>...🤓\n\n<b>©️𝑴𝒂𝒊𝒏𝒕𝒂𝒊𝒏𝒆𝒅 𝒃𝒚</b>   <a href=tg://user?id=1373761956> 𝑱𝑼𝑺𝑻𝑰𝑵♨</a>",
 
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("➕ 𝑨𝒅𝒅 𝑴𝒆 𝑻𝒐 𝒀𝒐𝒖𝒓 𝑮𝒓𝒐𝒖𝒑 ➕", url= "https://t.me/VjimdbotFilter_bot?startgroup=true")
+                        InlineKeyboardButton("🎬 𝑴𝒂𝒊𝒏 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬", url= "https://t.me/CKofficials")
                     ],
                     [
                         InlineKeyboardButton("𝑺𝒆𝒂𝒓𝒄𝒉 𝑯𝒆𝒓𝒆🔎", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("𝑨𝒏𝒚 𝑯𝒆𝒍𝒑 🛠️", url="https://t.me/Sanoob_Achu_18")
+                        InlineKeyboardButton("🎬 𝑵𝒆𝒘 𝑴𝒐𝒗𝒊𝒆𝒔 🎬", url="https://t.me/Ckottrelease_links")
                     ],
                     [
-                        InlineKeyboardButton("𝑴𝒚 𝑫𝒆𝒗 🤗", url="https://t.me/Sanoob_Achu_18"),
+                        InlineKeyboardButton("𝑴𝒚 𝑫𝒆𝒗 🤗", url="https://t.me/TTRabit"),
                         InlineKeyboardButton("𝑨𝒃𝒐𝒖𝒕 😎", callback_data="about")
                     ],
                     [
-                        InlineKeyboardButton("❕ 𝑯𝒐𝒘 𝑻𝒐 𝑼𝒔𝒆 𝑴𝒆 ❕", url="https://t.me/Sanoob_Achu_18")
+                        InlineKeyboardButton("🎥 𝑨𝒏𝒊𝒎𝒂𝒕𝒊𝒐𝒏 🎥", url="https://t.me/CKAnimatedSeries")
                     ]    
                 ]
             )
