@@ -11,21 +11,21 @@ logger = logging.getLogger(__name__)
 ADMINS = int(os.environ.get("ADMINS", 1745047302))
 
 PHOTO = [
-    "https://telegra.ph/file/e5f1bc50702a09de0509d.jpg",
-    "https://telegra.ph/file/63317e41353ec9ea37b16.jpg",
-    "https://telegra.ph/file/dca68778d63eac097e44f.jpg",
-    "https://telegra.ph/file/57f3e9073afdb412d3245.jpg",
-    "https://telegra.ph/file/4da354c80921ae02c2e1a.jpg",
-    "https://telegra.ph/file/6598a7416ac15bc1f2be7.jpg",
-    "https://telegra.ph/file/1e235b970662d542d2ee7.jpg",
-    "https://telegra.ph/file/4c8b10f25d9014d8126d9.jpg",
-    "https://telegra.ph/file/0e4ae128a5b4bbf42617a.jpg",
-    "https://telegra.ph/file/f8078fa42fd2e8cef2893.jpg",
-    "https://telegra.ph/file/4565f5197c6e68dfccec4.jpg",
-    "https://telegra.ph/file/b753896582001a7091773.jpg",
-    "https://telegra.ph/file/beebf5a0da5059ab86df7.jpg",
-    "https://telegra.ph/file/ffb7d9468a49abdd3934a.jpg",
-    "https://telegra.ph/file/a5a36051cfa970bbbce29.jpg"
+    "https://telegra.ph/file/43a5ebd42876cc100e6c6.jpg",
+    "https://telegra.ph/file/92846c8378f0c25b9c1ba.jpg",
+    "https://telegra.ph/file/34eca2bacdb0ca1bf4dfb.jpg",
+    "https://telegra.ph/file/4a8e9f00fc448dec27ec6.jpg",
+    "https://telegra.ph/file/7910b21af18197b6e7d03.jpg",
+    "https://telegra.ph/file/82b4cc6bb31a7afad0354.jpg",
+    "https://telegra.ph/file/685535abd49769a808d79.jpg",
+    "https://telegra.ph/file/69082720db542ed53f216.jpg",
+    "https://telegra.ph/file/e219cfff6eaaeb2d0483f.jpg",
+    "https://telegra.ph/file/23de5a85e802855d3174f.jpg",
+    "https://telegra.ph/file/1302fb72a9460733dd961.jpg",
+    "https://telegra.ph/file/15012e255c6be045e49d1.jpg",
+    "https://telegra.ph/file/855a1b770133d4ba007bc.jpg",
+    "https://telegra.ph/file/b66d7f54ac42e87e8cb74.jpg",
+    "https://telegra.ph/file/11e381e3cde15bae2b90a.jpg"
 ]
 
 @Client.on_message(filters.command("start"))
@@ -65,7 +65,7 @@ async def start(bot, cmd):
             except Exception:
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
+                    photo=f"https://telegra.ph/file/11e381e3cde15bae2b90a.jpg",
                     caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
@@ -104,7 +104,7 @@ async def start(bot, cmd):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_photo(
             chat_id=cmd.from_user.id,
-            photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
+            photo=f"https://telegra.ph/file/11e381e3cde15bae2b90a.jpg",
             caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
