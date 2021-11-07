@@ -1,12 +1,32 @@
 import os
 import logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
-from info import TUTORIAL 
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
+
+ADMINS = int(os.environ.get("ADMINS", 1745047302))
+
+PHOTO = [
+    "https://telegra.ph/file/e5f1bc50702a09de0509d.jpg",
+    "https://telegra.ph/file/63317e41353ec9ea37b16.jpg",
+    "https://telegra.ph/file/dca68778d63eac097e44f.jpg",
+    "https://telegra.ph/file/57f3e9073afdb412d3245.jpg",
+    "https://telegra.ph/file/4da354c80921ae02c2e1a.jpg",
+    "https://telegra.ph/file/6598a7416ac15bc1f2be7.jpg",
+    "https://telegra.ph/file/1e235b970662d542d2ee7.jpg",
+    "https://telegra.ph/file/4c8b10f25d9014d8126d9.jpg",
+    "https://telegra.ph/file/0e4ae128a5b4bbf42617a.jpg",
+    "https://telegra.ph/file/f8078fa42fd2e8cef2893.jpg",
+    "https://telegra.ph/file/4565f5197c6e68dfccec4.jpg",
+    "https://telegra.ph/file/b753896582001a7091773.jpg",
+    "https://telegra.ph/file/beebf5a0da5059ab86df7.jpg",
+    "https://telegra.ph/file/ffb7d9468a49abdd3934a.jpg",
+    "https://telegra.ph/file/a5a36051cfa970bbbce29.jpg"
+]
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
@@ -26,16 +46,16 @@ async def start(bot, cmd):
                     return
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
-                await bot.send_message(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    text="**♦️ READ THIS INSTRUCTION ♦️\n ✪ഫയലുകൾ ലഭിക്കുന്നതിനായി  നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ join ചെയ്യണം ശേഷം refresh button അമർത്തുക\n ✪ You Need To Join Our Channel and Press Refresh Button to get the File.!**",
-                    reply_markup=InlineKeyboardMarkup(
+                    photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
+                   reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("⭕️Join Channel ⭕️", url=invite_link.invite_link)
+                                InlineKeyboardButton("⭕️Join Channel⭕️", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄Try Again🔃", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton(" 🔄Restart🔃", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -43,9 +63,10 @@ async def start(bot, cmd):
                 )
                 return
             except Exception:
-                await bot.send_message(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    text="Something went Wrong.",
+                    photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
+                    caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -65,14 +86,12 @@ async def start(bot, cmd):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
-                buttons = [
-                    [
-                        InlineKeyboardButton('🎬 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬', url='https://t.me/CKofficials')
-                    ],
-                    [
-                        InlineKeyboardButton('👥 𝑮𝒓𝒐𝒖𝒑 👥', url='https://t.me/CK_linkz')
-                    ]
-                    ]
+                buttons = [[
+            InlineKeyboardButton('🎬𝑪𝒉𝒂𝒏𝒏𝒆𝒍🎬', url='https://t.me/PCLinks_1'),
+            InlineKeyboardButton('👥𝑮𝒓𝒐𝒖𝒑👥', url='https://t.me/PCLinks')
+          ],[
+            InlineKeyboardButton('🎬𝑵𝒆𝒘 𝑹𝒆𝒍𝒆𝒂𝒔𝒆🎬', url= 'https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+        ]]
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
                     file_id=file_id,
@@ -83,43 +102,38 @@ async def start(bot, cmd):
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
-        await bot.send_message(
+        await bot.send_photo(
             chat_id=cmd.from_user.id,
-            text="**♦️ READ THIS INSTRUCTION ♦️\n ✪ഫയലുകൾ ലഭിക്കുന്നതിനായി  നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ join ചെയ്യണം ശേഷം refresh button അമർത്തുക\n ✪ You Need To Join Our Channel and Press Refresh Button to get the File.!**",           
+            photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
+            caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("⭕️Join Channel⭕️", url=invite_link.invite_link)
+                        InlineKeyboardButton("🔰Join Channel🔰", url=invite_link.invite_link)
                     ]
                 ]
             )
         )
     else:
         await cmd.reply_photo(
-
-            photo="https://i.ibb.co/ckY6H4g/Photo-1946514705.jpg",
-
-            caption=f"<b>Hai</b> {cmd.from_user.mention}  Guys!🙋,\n\n<b>I'm[☞ 𝙸𝙼𝙳𝙱 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 🤖](https://t.me/XiaomiMintBrowserobot) or you can call me as Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group</b> ....\n\n<b>Its Easy To Use Me; Just Add Me To Your Group As Admin, Thats All, i will Provide Movies There</b>...🤓\n\n<b>©️𝑴𝒂𝒊𝒏𝒕𝒂𝒊𝒏𝒆𝒅 𝒃𝒚</b>   <a href=tg://user?id=1373761956> 𝑱𝑼𝑺𝑻𝑰𝑵♨</a>",
-
+            photo=f"{random.choice(PHOTO)}",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
-                [
                     [
-                        InlineKeyboardButton("🎬 𝑴𝒂𝒊𝒏 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 🎬", url= "https://t.me/CKofficials")
+                    [
+                        InlineKeyboardButton("💞𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓💞", url= "https://t.me/Sanoob_Achu_18")
                     ],
                     [
-                        InlineKeyboardButton("𝑺𝒆𝒂𝒓𝒄𝒉 𝑯𝒆𝒓𝒆🔎", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("🎬 𝑵𝒆𝒘 𝑴𝒐𝒗𝒊𝒆𝒔 🎬", url="https://t.me/Ckottrelease_links")
+                        InlineKeyboardButton("👥𝑮𝒓𝒐𝒖𝒑👥", url="https://t.me/PCLinks"),
+                        InlineKeyboardButton("🎬𝑪𝒉𝒂𝒏𝒏𝒆𝒍🎬", url="https://t.me/PCLinks_1")
                     ],
                     [
-                        InlineKeyboardButton("𝑴𝒚 𝑫𝒆𝒗 🤗", url="https://t.me/TTRabit"),
-                        InlineKeyboardButton("𝑨𝒃𝒐𝒖𝒕 😎", callback_data="about")
-                    ],
-                    [
-                        InlineKeyboardButton("🎥 𝑨𝒏𝒊𝒎𝒂𝒕𝒊𝒐𝒏 🎥", url="https://t.me/CKAnimatedSeries")
+                        InlineKeyboardButton("👥𝑺𝒆𝒓𝒊𝒆𝒔 𝑮𝒓𝒐𝒖𝒑👥", url="https://t.me/PCSeries_Group"),
+                        InlineKeyboardButton("👥𝑺𝒆𝒓𝒊𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍👥", url="https://t.me/PC_Serieschannel")
                     ]    
                 ]
             )
-        )
+         )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
@@ -203,9 +217,14 @@ async def delete(bot, message):
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
     buttons = [[
-            InlineKeyboardButton('𝐂𝐇𝐀𝐍𝐍𝐄𝐋💗', url='https://t.me/joinchat/AK1vv2n8AZ41NmY1'),
+            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/PCSeries_Group'),
             InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/PCLinks')
         ],[
-            InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄𝐒🎻', url='https://t.me/ottmovies_updates')
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/PCLinks_1')
+        ],[
+            InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/ottmovies_updates'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+        ],[
+            InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/PCTheatrePrintLinks')
         ]]
     await message.reply(text="<b><u>😁എന്തിനാ മോനെ ഇത്രേം സാഹസം കാണിച്ചത് 📃Source Code📃 ന് വേണ്ടിയാണോ🙄ന്തയാലും ഇവിടെ വരെ വന്നില്ലേ🤔 ചാനലിലും ഗ്രൂപ്പിലുമൊക്കെ ജോയിൻ😛 ചെയ്തിട്ട് പൊക്കോ🚶🤧</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
