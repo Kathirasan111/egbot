@@ -87,10 +87,10 @@ async def start(bot, cmd):
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
                 buttons = [[
-            InlineKeyboardButton('🎬𝑪𝒉𝒂𝒏𝒏𝒆𝒍🎬', url='https://t.me/PCLinks_1'),
-            InlineKeyboardButton('👥𝑮𝒓𝒐𝒖𝒑👥', url='https://t.me/PCLinks')
+            InlineKeyboardButton('🎭𝖦𝗋𝗈𝗎𝗉🎭', url='https://t.me/CK_linkz'),
+            InlineKeyboardButton('🔊𝖢𝗁𝖺𝗇𝗇𝖾𝗅🔊', url='https://t.me/CKofficials')
           ],[
-            InlineKeyboardButton('🎬𝑵𝒆𝒘 𝑹𝒆𝒍𝒆𝒂𝒔𝒆🎬', url= 'https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+            InlineKeyboardButton('❗️𝖭𝖾𝗐 𝖱𝖾𝗅𝖾𝖺𝗌𝖾❗️', url= 'https://t.me/Ckottrelease_links')
         ]]
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
@@ -121,15 +121,15 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
-                        InlineKeyboardButton("💞𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓💞", url= "https://t.me/Sanoob_Achu_18")
+                        InlineKeyboardButton("👨‍💻𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋👨‍💻", url= "https://t.me/TTRabit")
                     ],
                     [
-                        InlineKeyboardButton("👥𝑮𝒓𝒐𝒖𝒑👥", url="https://t.me/PCLinks"),
-                        InlineKeyboardButton("🎬𝑪𝒉𝒂𝒏𝒏𝒆𝒍🎬", url="https://t.me/PCLinks_1")
+                        InlineKeyboardButton("🎭𝖦𝗋𝗈𝗎𝗉🎭", url="https://t.me/CK_linkz"),
+                        InlineKeyboardButton("🔊𝖢𝗁𝖺𝗇𝗇𝖾𝗅🔊", url="https://t.me/CKofficials")
                     ],
                     [
-                        InlineKeyboardButton("👥𝑺𝒆𝒓𝒊𝒆𝒔 𝑮𝒓𝒐𝒖𝒑👥", url="https://t.me/PCSeries_Group"),
-                        InlineKeyboardButton("👥𝑺𝒆𝒓𝒊𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍👥", url="https://t.me/PC_Serieschannel")
+                        InlineKeyboardButton("❗️𝖭𝖾𝗐 𝖱𝖾𝗅𝖾𝖺𝗌𝖾❗️", url="https://t.me/Ckottrelease_links"),
+                        InlineKeyboardButton("💠𝖠𝗇𝗂𝗆𝖺𝗍𝗂𝗈𝗇💠", url="https://t.me/CKAnimatedSeries")
                     ]    
                 ]
             )
