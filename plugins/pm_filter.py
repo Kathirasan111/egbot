@@ -82,17 +82,17 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="🚀 𝑮𝒐 𝑻𝒐 𝑵𝒆𝒙𝒕 𝑷𝒂𝒈𝒆 🚀",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="𝖭𝖾𝗑𝗍 ➡",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"⭕ Pages 1/{data['total']}",callback_data="pages")]
@@ -103,7 +103,7 @@ async def filter(client, message):
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Name {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -140,22 +140,22 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="⭕️ Pages 1/1",callback_data="pages")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="🚀 𝑮𝒐 𝑻𝒐 𝑵𝒆𝒙𝒕 𝑷𝒂𝒈𝒆 🚀",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="𝖭𝖾𝗑𝗍 ➡",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"⭕ Pages 1/{data['total']}",callback_data="pages")]
@@ -164,9 +164,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>നിങ്ങൾ ചോദിച്ച {search} ‌എന്ന സിനിമ താഴെ ഉണ്ട് ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് ഡൌൺലോഡ് ചെയ്യുക</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Click On The Link Below To Download The Movie {search}</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -211,7 +211,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"⭕️ Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -225,7 +225,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"⭕️ Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -249,7 +249,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"⭕️ Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -263,7 +263,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"⭕️ Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -345,4 +345,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("കിരീടവും ചെങ്കോലും അണിഞ്ഞ രാജാവിന്റെ കഥ ഇവിടെ അവസാനിക്കുന്നു",show_alert=True)
+        await query.answer("കിരീടവും ചെങ്കോലും അണിഞ്ഞ രാജാവിന്റെ കഥ ഇവിടെ അവസാനിക്കുന്നു..",show_alert=True)
