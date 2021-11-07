@@ -1,4 +1,4 @@
-# Modified Version Of [Media Search bot](https://github.com/MRK-YT/MT-Media-Search-bot)
+# Modified Version Of [Achu Vj](https://t.me/Sanoob_Achu_18)
 
 </a>
 </p>
@@ -35,13 +35,13 @@
 
 ## Thanks to 
 * [Pyrogram](https://github.com/pyrogram/pyrogram)
-* Original [Repo](https://github.com/Mahesh0253/Media-Search-bot)
+* Original [Repo](https://t.me/comemanrepo/9)
 
 
 ## Support
-Contact Me On [Telegram](https://t.me/subinps_bot)
+Contact Me On [Telegram](https://t.me/Sanoob_Achu_18)
 
-[Update Channel](https://t.me/Mo_Tech_YT)
+[Update Channel](https://t.me/ottmovies_updates)
 
 ## License
 Code released under [The GNU General Public License](LICENSE).
