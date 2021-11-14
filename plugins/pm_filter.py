@@ -367,4 +367,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("It's not possible because you did not requested this movie.",show_alert=True)
+        await query.answer("It's not possible because it was requested by someone else‌‌.",show_alert=True)
