@@ -121,7 +121,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
-                        InlineKeyboardButton("👨‍💻𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋👨‍💻", url= "https://t.me/TTRabit")
+                        InlineKeyboardButton("❕️INSTAGRAM❕️", url= "https://www.instagram.com/invites/contact/?i=61b3d77jh78w&utm_content=n9vwxdd")
                     ],
                     [
                         InlineKeyboardButton("🎭𝖦𝗋𝗈𝗎𝗉🎭", url="https://t.me/CK_linkz"),
@@ -217,14 +217,14 @@ async def delete(bot, message):
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
     buttons = [[
-            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/PCSeries_Group'),
-            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/PCLinks')
+            InlineKeyboardButton('❕️INSTAGRAM❕️', url='https://www.instagram.com/invites/contact/?i=61b3d77jh78w&utm_content=n9vwxdd'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/CK_linkz')
         ],[
-            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/PCLinks_1')
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/CKofficials')
         ],[
             InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/ottmovies_updates'),
-            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/Ckottrelease_links')
         ],[
             InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/PCTheatrePrintLinks')
         ]]
-    await message.reply(text="<b><u>😁എന്തിനാ മോനെ ഇത്രേം സാഹസം കാണിച്ചത് 📃Source Code📃 ന് വേണ്ടിയാണോ🙄ന്തയാലും ഇവിടെ വരെ വന്നില്ലേ🤔 ചാനലിലും ഗ്രൂപ്പിലുമൊക്കെ ജോയിൻ😛 ചെയ്തിട്ട് പൊക്കോ🚶🤧</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b><u>ചെങ്കോലും കിരീടവും നഷ്ടമായ രാജകുമാരന്റെ കഥ ഇവിടെ പൂർണമാകുന്നു.</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
