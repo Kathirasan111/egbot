@@ -317,10 +317,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
                 buttons = [[
-            InlineKeyboardButton('🎬𝑪𝒉𝒂𝒏𝒏𝒆𝒍🎬', url='https://t.me/PCLinks_1'),
-            InlineKeyboardButton('👥𝑮𝒓𝒐𝒖𝒑👥', url='https://t.me/PCLinks')
+            InlineKeyboardButton('🔊𝑪𝒉𝒂𝒏𝒏𝒆𝒍🔊', url='https://t.me/CKofficial'),
+            InlineKeyboardButton('👥𝑮𝒓𝒐𝒖𝒑👥', url='https://t.me/CK_linkz')
           ],[
-            InlineKeyboardButton('🎬𝑵𝒆𝒘 𝑹𝒆𝒍𝒆𝒂𝒔𝒆🎬', url= 'https://t.me/joinchat/b2crtyaFjLRiMDQ1')
+            InlineKeyboardButton('🎭𝑵𝒆𝒘 𝑹𝒆𝒍𝒆𝒂𝒔𝒆🎭', url= 'https://t.me/Ckottrelease_links')
         ]]
                
                 await query.answer()
